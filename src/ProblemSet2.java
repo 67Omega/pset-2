@@ -28,7 +28,32 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
 
-        
+        Scanner in = new Scanner(System.in);
+    System.out.println("Enter your first name: ");
+    String firstName = in.next();
+    in.nextLine();
+
+    System.out.println("Enter your last name:");
+    String lastName = in.next();
+    in.nextLine();
+
+    System.out.println("Enter your grade:");
+    int grade = in.nextInt();
+    in.nextLine();
+
+    System.out.println("Enter your age:");
+    int age = in.nextInt();
+    in.nextLine();
+
+    System.out.println("Enter your hometown:");
+    String hometown = in.nextLine();
+    System.out.println("");
+    System.out.println("NAME \t \t : " + firstName + " " + lastName);
+    System.out.println("GRADE \t \t : " + grade);
+    System.out.println("AGE \t \t : " + age);
+    System.out.println("HOMETOWN \t : " + hometown + "\n \n");
+
+    in.close();
         
         /*
          * Exercise 2.
@@ -37,7 +62,16 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
+	Scanner in = new Scanner(System.in);
+    System.out.println("Enter a dollar amount: ");
+    int dollarAmountInPercent = (int) Math.round((in.nextDouble()) * 100);
+    System.out.println();
+    
+    int numDollars = Math.floor(dollarAmountInPercent / 100);
+    int percentChangeOne = dollarAmountInPercent - (numDollars * 100);
+    int numQuarters = Math.floor(percentChangeOne / 25);
 
+    in.close();
 
         /*
          * Exercise 3.
