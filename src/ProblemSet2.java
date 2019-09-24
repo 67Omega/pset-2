@@ -52,8 +52,6 @@ public class ProblemSet2 {
     System.out.println("GRADE \t \t : " + grade);
     System.out.println("AGE \t \t : " + age);
     System.out.println("HOMETOWN \t : " + hometown + "\n \n");
-
-    in.close();
         
         /*
          * Exercise 2.
@@ -86,7 +84,6 @@ public class ProblemSet2 {
     System.out.printf("DIMES \t\t: %d\n", numDimes);
     System.out.printf("NICKELS \t: %d\n", numNickels);
     System.out.printf("PENNIES \t: %d\n\n", numPennies);
-    in.close();
 
         /*
          * Exercise 3.
@@ -95,7 +92,32 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
-
+System.out.println("Enter a dollar amount: ");
+    int newDollarAmountInPercent = (int) Math.round((in.nextDouble()) * 100);
+    System.out.println();
+    int twentyBillValue = 2000;
+    int tenBillValue = 1000;
+    int fiveBillValue = 500;
+    int numTwentyBills = (int) Math.floor(newDollarAmountInPercent / twentyBillValue);
+    int percentChangeTwenty = newDollarAmountInPercent - (numTwentyBills * twentyBillValue);
+    int numTenBills = (int) Math.floor(percentChangeTwenty / tenBillValue);
+    int percentChangeTen = percentChangeTwenty - (numTenBills * tenBillValue);
+    int numFiveBills = (int) Math.floor(percentChangeTen / fiveBillValue);
+    int percentChangeFive = percentChangeTen - (numFiveBills * fiveBillValue);
+    int numDollarBills = (int) Math.floor(percentChangeFive / dollarValue);
+    int percentChangeDollar = percentChangeFive - (numDollarBills * dollarValue);
+    int newNumQuarters = (int) Math.floor(percentChangeDollar / quarterValue);
+    int percentChangeQuarter = percentChangeDollar - (newNumQuarters * quarterValue);
+    int newNumDimes = (int) Math.floor(percentChangeQuarter / dimeValue);
+    int percentChangeDime = percentChangeQuarter - (newNumDimes * dimeValue);
+    int newNumNickels = (int) Math.floor(percentChangeDime / nickelValue);
+    int percentChangeNickel = percentChangeDime - (newNumNickels * nickelValue);
+    int newNumPennies = (int) Math.floor(percentChangeNickel / pennyValue);
+    int percentChangePenny = percentChangeNickel - (newNumPennies * pennyValue);
+    int numBills = (numTwentyBills + numTenBills + numFiveBills + numDollarBills);
+    int numCoins = (newNumQuarters + newNumDimes + newNumNickels + newNumPennies);
+    System.out.printf("BILLS : %d\n", numBills);
+    System.out.printf("COINS : %d\n\n", numCoins);
 
         /*
          * Exercise 4.
@@ -104,7 +126,23 @@ public class ProblemSet2 {
          * and inches.
          */
 
-
+Scanner in = new Scanner(System.in);
+    System.out.println("Enter a number of inches: ");
+    System.out.println();
+    int numInches = in.nextInt();
+    int inchesPerMile = 63360;
+    int inchesPerYard = 36;
+    int inchesPerFoot = 12;
+    int numMiles = (int) Math.floor(numInches / inchesPerMile);
+    int inchesNoMiles = numInches - (numMiles * inchesPerMile);
+    int numYards = (int) Math.floor(inchesNoMiles / inchesPerYard);
+    int inchesNoYards = (inchesNoMiles - (numYards * inchesPerYard));
+    int numFeet = (int) Math.floor(inchesNoYards / inchesPerFoot);
+    int remainingInches = (inchesNoYards - (numFeet * inchesPerFoot));
+    System.out.printf("MILES : %d\n", numMiles);
+    System.out.printf("YARDS : %d\n", numYards);
+    System.out.printf("FEET  : %d\n", numFeet);
+    System.out.printf("INCHES: %d\n\n", remainingInches);
         
         /*
          * Exercise 5.
