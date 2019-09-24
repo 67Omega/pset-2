@@ -66,11 +66,26 @@ public class ProblemSet2 {
     System.out.println("Enter a dollar amount: ");
     int dollarAmountInPercent = (int) Math.round((in.nextDouble()) * 100);
     System.out.println();
-    
-    int numDollars = Math.floor(dollarAmountInPercent / 100);
-    int percentChangeOne = dollarAmountInPercent - (numDollars * 100);
-    int numQuarters = Math.floor(percentChangeOne / 25);
-
+    int dollarValue = 100;
+    int quarterValue = 25;
+    int dimeValue = 10;
+    int nickelValue = 5;
+    int pennyValue = 1;
+    int numDollars = (int) Math.floor(dollarAmountInPercent / dollarValue);
+    int percentChangeOne = dollarAmountInPercent - (numDollars * dollarValue);
+    int numQuarters = (int) Math.floor(percentChangeOne / quarterValue);
+    int percentChangeTwo = percentChangeOne - (numQuarters * quarterValue);
+    int numDimes = (int) Math.floor(percentChangeTwo / dimeValue);
+    int percentChangeThree = percentChangeTwo - (numDimes * dimeValue);
+    int numNickels = (int) Math.floor(percentChangeThree / nickelValue);
+    int percentChangeFour = percentChangeThree - (numNickels * nickelValue);
+    int numPennies = (int) Math.floor(percentChangeFour / pennyValue);
+    int percentChangeFinal = percentChangeFour - (numPennies * pennyValue);
+    System.out.printf("DOLLARS \t: %d\n", numDollars);
+    System.out.printf("QUARTERS \t: %d\n", numQuarters);
+    System.out.printf("DIMES \t\t: %d\n", numDimes);
+    System.out.printf("NICKELS \t: %d\n", numNickels);
+    System.out.printf("PENNIES \t: %d\n\n", numPennies);
     in.close();
 
         /*
