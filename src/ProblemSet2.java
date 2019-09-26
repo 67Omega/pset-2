@@ -15,7 +15,6 @@
  */
 
 import java.util.Scanner;
-
 public class ProblemSet2 {
     
     public static void main(String[] args) {
@@ -28,7 +27,6 @@ public class ProblemSet2 {
          * name, grade, age, and hometown.
          */
 
-        Scanner in = new Scanner(System.in);
     System.out.print("Enter your first name: ");
     String firstName = in.next();
     in.nextLine();
@@ -48,10 +46,10 @@ public class ProblemSet2 {
     System.out.print("Enter your hometown: ");
     String hometown = in.nextLine();
     System.out.println();
-    System.out.print("NAME \t \t : " + firstName + " " + lastName);
-    System.out.print("GRADE \t \t : " + grade);
-    System.out.print("AGE \t \t : " + age);
-    System.out.print("HOMETOWN \t : " + hometown + "\n \n");
+    System.out.println("NAME \t \t : " + firstName + " " + lastName);
+    System.out.println("GRADE \t \t : " + grade);
+    System.out.println("AGE \t \t : " + age);
+    System.out.println("HOMETOWN \t : " + hometown + "\n \n");
         
         /*
          * Exercise 2.
@@ -60,7 +58,6 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
-	Scanner in = new Scanner(System.in);
     System.out.print("Enter a dollar amount: ");
     int dollarAmountInPercent = (int) Math.round((in.nextDouble()) * 100);
     System.out.println();
@@ -92,7 +89,7 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
-System.out.print("Enter a dollar amount: ");
+    System.out.print("Enter a dollar amount: ");
     int newDollarAmountInPercent = (int) Math.round((in.nextDouble()) * 100);
     System.out.println();
     int twentyBillValue = 2000;
@@ -126,7 +123,6 @@ System.out.print("Enter a dollar amount: ");
          * and inches.
          */
 
-Scanner in = new Scanner(System.in);
     System.out.print("Enter a number of inches: ");
     System.out.println();
     int numInches = in.nextInt();
@@ -151,7 +147,6 @@ Scanner in = new Scanner(System.in);
          * meters, and centimeters.
          */
         
-    Scanner in = new Scanner (System.in);
     System.out.print("Enter a number of centimeters: ");
     int numCentimeters = in.nextInt();
     System.out.println();
@@ -171,7 +166,6 @@ Scanner in = new Scanner(System.in);
          * Given a diameter, print the area and circumference of the corresponding circle.
          */
         
-Scanner in = new Scanner (System.in);
     System.out.print("Enter a diameter: ");
     int diameter = in.nextInt();
     System.out.println();
@@ -188,7 +182,6 @@ Scanner in = new Scanner (System.in);
          * corresponding rectangle.
          */
         
-Scanner in = new Scanner (System.in);
     System.out.print("Enter a length: ");
     int length = in.nextInt();
 	in.nextLine();
@@ -209,7 +202,6 @@ Scanner in = new Scanner (System.in);
          * Given a side length, print the area and perimeter of the corresponding hexagon.
          */
         
-    Scanner in = new Scanner (System.in);
     System.out.print("Enter a side length: ");
     int hexSideLength = in.nextInt();
     System.out.println();
@@ -224,7 +216,6 @@ Scanner in = new Scanner (System.in);
          * Given a string, reverse and print the first and second halves of that string.
          */
         
-    Scanner in = new Scanner (System.in);
     System.out.print("Enter a String: ");
     String forwardString = in.next();
     System.out.println();
@@ -234,6 +225,7 @@ Scanner in = new Scanner (System.in);
     String reverseString = (secondHalf + firstHalf);
     System.out.print(reverseString);
     System.out.println();
+    System.out.println();
         
         /*
          * Exercise 10.
@@ -241,7 +233,6 @@ Scanner in = new Scanner (System.in);
          * Given a first, middle, and last name, print the corresponding initials.
          */
         
-Scanner in = new Scanner(System.in);
     System.out.print("Enter your first name: ");
     String newFirstName = in.next();
     in.nextLine();
@@ -260,6 +251,6 @@ Scanner in = new Scanner(System.in);
     System.out.println(firstInitial + middleInitial + lastInitial);
     System.out.println(); 
         
-        in.close();
-    }
+    in.close();
+  }
 }
