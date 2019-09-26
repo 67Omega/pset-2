@@ -33,19 +33,19 @@ public class ProblemSet2 {
     String firstName = in.next();
     in.nextLine();
 
-    System.out.print("Enter your last name:");
+    System.out.print("Enter your last name: ");
     String lastName = in.next();
     in.nextLine();
 
-    System.out.print("Enter your grade:");
+    System.out.print("Enter your grade: ");
     int grade = in.nextInt();
     in.nextLine();
 
-    System.out.print("Enter your age:");
+    System.out.print("Enter your age: ");
     int age = in.nextInt();
     in.nextLine();
 
-    System.out.print("Enter your hometown:");
+    System.out.print("Enter your hometown: ");
     String hometown = in.nextLine();
     System.out.println();
     System.out.print("NAME \t \t : " + firstName + " " + lastName);
@@ -191,6 +191,7 @@ Scanner in = new Scanner (System.in);
 Scanner in = new Scanner (System.in);
     System.out.print("Enter a length: ");
     int length = in.nextInt();
+	in.nextLine();
     System.out.print("Enter a width: ");
     int width = in.nextInt();
     System.out.println();
@@ -223,7 +224,16 @@ Scanner in = new Scanner (System.in);
          * Given a string, reverse and print the first and second halves of that string.
          */
         
-
+    Scanner in = new Scanner (System.in);
+    System.out.print("Enter a String: ");
+    String forwardString = in.next();
+    System.out.println();
+    int stringHalfLength = (int) Math.floor((forwardString.length()) / 2);
+    String firstHalf = forwardString.substring(0, stringHalfLength);
+    String secondHalf = forwardString.substring((stringHalfLength));
+    String reverseString = (secondHalf + firstHalf);
+    System.out.print(reverseString);
+    System.out.println();
         
         /*
          * Exercise 10.
@@ -231,7 +241,24 @@ Scanner in = new Scanner (System.in);
          * Given a first, middle, and last name, print the corresponding initials.
          */
         
+Scanner in = new Scanner(System.in);
+    System.out.print("Enter your first name: ");
+    String newFirstName = in.next();
+    in.nextLine();
 
+    System.out.print("Enter your middle name: ");
+    String middleName = in.next();
+    in.nextLine();
+
+    System.out.print("Enter your last name: ");
+    String newLastName = in.next();
+    System.out.println();
+
+    String firstInitial = newFirstName.substring(0, 1);
+    String middleInitial = middleName.substring(0, 1);
+    String lastInitial = newLastName.substring(0, 1);
+    System.out.println(firstInitial + middleInitial + lastInitial);
+    System.out.println(); 
         
         in.close();
     }
