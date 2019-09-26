@@ -188,7 +188,19 @@ Scanner in = new Scanner (System.in);
          * corresponding rectangle.
          */
         
-
+Scanner in = new Scanner (System.in);
+    System.out.print("Enter a length: ");
+    int length = in.nextInt();
+    System.out.print("Enter a width: ");
+    int width = in.nextInt();
+    System.out.println();
+    double rectangleArea = (length * width);
+    double rectanglePerimeter = (length * 2) + (width * 2);
+    double squareSideSum = (length * length) + (width * width);
+    double rectangleDiagonal = Math.sqrt(squareSideSum);
+    System.out.printf("AREA      : %.2f\n", rectangleArea);
+    System.out.printf("PERIMETER : %.2f\n", rectanglePerimeter);
+    System.out.printf("DIAGONAL  : %.2f\n\n", rectangleDiagonal);
         
         /*
          * Exercise 8.
@@ -196,7 +208,14 @@ Scanner in = new Scanner (System.in);
          * Given a side length, print the area and perimeter of the corresponding hexagon.
          */
         
-
+    Scanner in = new Scanner (System.in);
+    System.out.print("Enter a side length: ");
+    int hexSideLength = in.nextInt();
+    System.out.println();
+    double hexagonArea = (0.5 * (3 * Math.sqrt(3))) * Math.pow (hexSideLength, 2);
+    double hexagonPerimeter = hexSideLength * 6;
+    System.out.printf("AREA      : %.2f\n", hexagonArea);
+    System.out.printf("PERIMETER : %.2f\n\n", hexagonPerimeter);
         
         /*
          * Exercise 9.
