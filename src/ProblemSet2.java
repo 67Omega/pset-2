@@ -29,29 +29,29 @@ public class ProblemSet2 {
          */
 
         Scanner in = new Scanner(System.in);
-    System.out.println("Enter your first name: ");
+    System.out.print("Enter your first name: ");
     String firstName = in.next();
     in.nextLine();
 
-    System.out.println("Enter your last name:");
+    System.out.print("Enter your last name:");
     String lastName = in.next();
     in.nextLine();
 
-    System.out.println("Enter your grade:");
+    System.out.print("Enter your grade:");
     int grade = in.nextInt();
     in.nextLine();
 
-    System.out.println("Enter your age:");
+    System.out.print("Enter your age:");
     int age = in.nextInt();
     in.nextLine();
 
-    System.out.println("Enter your hometown:");
+    System.out.print("Enter your hometown:");
     String hometown = in.nextLine();
-    System.out.println("");
-    System.out.println("NAME \t \t : " + firstName + " " + lastName);
-    System.out.println("GRADE \t \t : " + grade);
-    System.out.println("AGE \t \t : " + age);
-    System.out.println("HOMETOWN \t : " + hometown + "\n \n");
+    System.out.println();
+    System.out.print("NAME \t \t : " + firstName + " " + lastName);
+    System.out.print("GRADE \t \t : " + grade);
+    System.out.print("AGE \t \t : " + age);
+    System.out.print("HOMETOWN \t : " + hometown + "\n \n");
         
         /*
          * Exercise 2.
@@ -61,7 +61,7 @@ public class ProblemSet2 {
          */
 
 	Scanner in = new Scanner(System.in);
-    System.out.println("Enter a dollar amount: ");
+    System.out.print("Enter a dollar amount: ");
     int dollarAmountInPercent = (int) Math.round((in.nextDouble()) * 100);
     System.out.println();
     int dollarValue = 100;
@@ -92,7 +92,7 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
-System.out.println("Enter a dollar amount: ");
+System.out.print("Enter a dollar amount: ");
     int newDollarAmountInPercent = (int) Math.round((in.nextDouble()) * 100);
     System.out.println();
     int twentyBillValue = 2000;
@@ -127,7 +127,7 @@ System.out.println("Enter a dollar amount: ");
          */
 
 Scanner in = new Scanner(System.in);
-    System.out.println("Enter a number of inches: ");
+    System.out.print("Enter a number of inches: ");
     System.out.println();
     int numInches = in.nextInt();
     int inchesPerMile = 63360;
@@ -151,7 +151,19 @@ Scanner in = new Scanner(System.in);
          * meters, and centimeters.
          */
         
-
+    Scanner in = new Scanner (System.in);
+    System.out.print("Enter a number of centimeters: ");
+    int numCentimeters = in.nextInt();
+    System.out.println();
+    int centimetersPerMeter = 100;
+    int centimetersPerKilometer = 100000;
+    int numKilometers = (int) Math.floor(numCentimeters / centimetersPerKilometer);
+    int centimetersNoKilometers = numCentimeters - (numKilometers * centimetersPerKilometer);
+    int numMeters = (int) Math.floor(centimetersNoKilometers / centimetersPerMeter);
+    int remainingCentimeters = (centimetersNoKilometers - (numMeters * centimetersPerMeter));
+    System.out.printf("KILOMETERS  : %d\n", numKilometers);
+    System.out.printf("METERS      : %d\n", numMeters);
+    System.out.printf("CENTIMETERS : %d\n\n", remainingCentimeters);
         
         /*
          * Exercise 6.
@@ -159,7 +171,15 @@ Scanner in = new Scanner(System.in);
          * Given a diameter, print the area and circumference of the corresponding circle.
          */
         
-
+Scanner in = new Scanner (System.in);
+    System.out.print("Enter a diameter: ");
+    int diameter = in.nextInt();
+    System.out.println();
+    double radius = (diameter * 0.5);
+    double circleArea = (radius * radius) * Math.PI;
+    double circumference = Math.PI * diameter;
+    System.out.printf("AREA          : %.2f\n", circleArea);
+    System.out.printf("CIRCUMFERENCE : %.2f\n\n", circumference);
 
         /*
          * Exercise 7.
